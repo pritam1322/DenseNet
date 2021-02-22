@@ -37,7 +37,8 @@ class dense_blocK(nn.Module):    #Bottleneck Layer
         out = torch.cat((x,out),1)
         return out
 
-class Transition_layer(nn.Module):
+                                        
+class Transition_layer(nn.Module):          # Transition layer is used for reducing the resolution layers.
     def __init__(self, in_channels, out_channels):
         super(Transition_layer, self).__init__()
         self.conv = nn.Conv2d(in_channels, out_channels, kernel_size = 1, bias = False)
